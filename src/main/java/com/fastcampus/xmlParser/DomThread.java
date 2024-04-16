@@ -95,16 +95,17 @@ public class DomThread extends Thread {
             // <data> 태그의 리스트를 찾아온다
             NodeList dataList = element.getElementsByTagName("data");
             for (int i = 0; i < dataList.getLength(); i++) {
+                System.out.println("dataList.getLength() = " + dataList.getLength());//dataList의 길이
                 Element dataElement = (Element) dataList.item(i);
 
-                String numEf = dataElement.getElementsByTagName("numEf").item(0).getTextContent();
+                String numEf = dataElement.getElementsByTagName("numEf").item(0).getTextContent(); //데이터추출 : dataElement에서 특정 태그 이름을 가진 하위 요소들을 찾아내어 그 값을 읽는다.
                 String tmEf = dataElement.getElementsByTagName("tmEf").item(0).getTextContent();
                 String wf = dataElement.getElementsByTagName("wf").item(0).getTextContent();
                 String tmn = dataElement.getElementsByTagName("tmn").item(0).getTextContent();
                 String tmx = dataElement.getElementsByTagName("tmx").item(0).getTextContent();
 
                 WeatherData wd = new WeatherData(numEf, tmEf, wf, tmn, tmx);
-                weatherDataList.add(wd);
+                weatherDataList.add(wd); //xml파일안에 데이터를 이 리스트에 저장
             }
 
         } catch (Exception e) {
