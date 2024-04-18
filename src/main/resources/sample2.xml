@@ -1,0 +1,16 @@
+<class name="how to use xml parser">
+    <teacher name="t1"/>
+    <teacher name="t2"/>
+    <student name="s1">
+        <ID num="1"/>
+        <score num="80"/>
+    </student>
+    <student name="s2">
+        <ID num="2"/>
+        <score num="70"/>
+    </student>
+    <student name="s3">
+        <ID num="3"/>
+        <score num="90"/>
+    </student>
+</class>
